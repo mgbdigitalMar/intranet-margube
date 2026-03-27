@@ -1,0 +1,19 @@
+/* ── QUICK CATALOG ── */
+.quick-catalog{display:flex;gap:10px;flex-wrap:wrap;}
+.quick-catalog-item{
+  background:var(--surface2);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:14px 16px;
+  text-align:center;
+  min-width:100px;
+  transition:all .15s;
+  text-decoration:none;
+}
+.quick-catalog-item:hover{
+  border-color:var(--primary);
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(79,121,247,.15);
+}
+.quick-catalog-item .qc-icon{font-size:26px;margin-bottom:4px;}
+.quick-catalog-item .qc-name{font-size:12px;font-weight:600;color:var(--text2);}

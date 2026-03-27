@@ -1,0 +1,17 @@
+[build]
+providers = ["php", "nodejs"]
+
+[build.php]
+version = "8.2"
+
+[build.nodejs]
+version = "20"
+
+[build.php.build-commands]
+cmds = ["composer install --no-dev --optimize-autoloader --no-scripts", "npm ci --only=production", "npm run build"]
+
+[deploy]
+startCommand = "php artisan config:cache && php artisan route:cache && php artisan view:cache && vendor/bin/heroku-php-apache2 public/"
+healthcheckPath = "/"
+healthcheckTimeout = 300
+
