@@ -2,7 +2,7 @@
 providers = ["php", "nodejs"]
 
 [build.php]
-version = "8.2"
+version = "8.5"
 
 [build.nodejs]
 version = "20"
